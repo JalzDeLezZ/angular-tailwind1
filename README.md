@@ -22,8 +22,12 @@ $ ng serve
 $ tailwindcss: https://tailwindcss.com/docs/guides/angular
 $ ng add @angular/cdk
 
+# implement
+$ npm i -D @tailwindcss/forms
+
 # generate
 $ ng g c pages/login --style=none --skip-tests
+$ ng g c components/btn --skip-tests --style=none
 
 ```
 
