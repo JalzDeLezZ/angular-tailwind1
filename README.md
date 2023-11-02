@@ -21,6 +21,8 @@ $ ng new <project-name>
 $ ng serve
 $ tailwindcss: https://tailwindcss.com/docs/guides/angular
 $ ng add @angular/cdk
+$ ng add @fortawesome/angular-fontawesome@0.12.1
+$ angular cdk: https://material.angular.io/cdk/overlay/overview
 
 # implement
 $ npm i -D @tailwindcss/forms
@@ -38,6 +40,12 @@ $ ng g c components/btn --skip-tests --style=none
 [• Tailwindcss - Angular](https://tailwindcss.com/docs/guides/angular)
 
 [• QuickType](https://app.quicktype.io/)
+
+---
+
+<!-- PROJECT -->
+
+[• Creando Overlays](https://gist.github.com/nicobytes/92f050c77c8c8e5be63e97c1ae0b9c83#dropdown-v1)
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
@@ -61,4 +69,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
   RESOURCES:
   https://atlassian.design/resources/logo-library
   https://undraw.co/illustrations
+
+  * detach last commit
+  git reset --soft HEAD~1
  -->
