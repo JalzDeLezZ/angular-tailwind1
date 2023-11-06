@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+/* CDK */
 import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +14,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BoardsComponent,
     NavbarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, OverlayModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    OverlayModule,
+    FontAwesomeModule,
+    CdkAccordionModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

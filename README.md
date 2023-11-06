@@ -22,7 +22,7 @@ $ ng serve
 $ tailwindcss: https://tailwindcss.com/docs/guides/angular
 $ ng add @angular/cdk
 $ ng add @fortawesome/angular-fontawesome@0.12.1
-$ angular cdk: https://material.angular.io/cdk/overlay/overview
+$ angular cdk: https://material.angular.io/cdk/categories -- overlay, accordion
 
 # implement
 $ npm i -D @tailwindcss/forms
@@ -40,6 +40,8 @@ $ ng g c components/btn --skip-tests --style=none
 [• Tailwindcss - Angular](https://tailwindcss.com/docs/guides/angular)
 
 [• QuickType](https://app.quicktype.io/)
+
+[• Material Dashboards ](https://demos.creative-tim.com/material-dashboard-pro/pages/dashboards/analytics.html)
 
 ---
 
