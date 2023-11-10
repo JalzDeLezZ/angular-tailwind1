@@ -89,4 +89,7 @@ export class BoardComponent {
       todos: [],
     });
   }
+  dropHorizontal(event: CdkDragDrop<Column[]>) {
+    moveItemInArray(this.colums, event.previousIndex, event.currentIndex);
+  }
 }
