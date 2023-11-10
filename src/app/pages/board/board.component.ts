@@ -4,7 +4,7 @@ import {
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
-import { ToDo } from 'src/app/models/todo.model';
+import { ToDo, Column } from 'src/app/models/todo.model';
 
 @Component({
   selector: 'app-board',
@@ -24,36 +24,45 @@ import { ToDo } from 'src/app/models/todo.model';
   ],
 })
 export class BoardComponent {
-  todos: ToDo[] = [
+  colums: Column[] = [
     {
-      id: '1',
-      title: 'Make dishes',
+      title: 'To Do',
+      todos: [
+        {
+          id: '1',
+          title: 'Make dishes',
+        },
+        {
+          id: '2',
+          title: 'Buy a unicorn',
+        },
+        {
+          id: '2',
+          title: 'Watch Angular Path in Platzi',
+        },
+      ],
     },
     {
-      id: '2',
-      title: 'Buy a unicorn',
+      title: 'Doing',
+      todos: [
+        {
+          id: '1',
+          title: 'Make dishes',
+        },
+        {
+          id: '2',
+          title: 'Buy a unicorn',
+        },
+      ],
     },
     {
-      id: '2',
-      title: 'Watch Angular Path in Platzi',
-    },
-  ];
-
-  doing: ToDo[] = [
-    {
-      id: '1',
-      title: 'Make dishes',
-    },
-    {
-      id: '2',
-      title: 'Buy a unicorn',
-    },
-  ];
-
-  done: ToDo[] = [
-    {
-      id: '1',
-      title: 'Make dishes',
+      title: 'Done',
+      todos: [
+        {
+          id: '1',
+          title: 'Make dishes',
+        },
+      ],
     },
   ];
 
@@ -72,5 +81,12 @@ export class BoardComponent {
         event.currentIndex // index to where to move
       );
     }
+  }
+
+  addColumn() {
+    this.colums.push({
+      title: 'New Column',
+      todos: [],
+    });
   }
 }
