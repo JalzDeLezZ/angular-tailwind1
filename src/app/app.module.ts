@@ -15,6 +15,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BoardComponent } from './pages/board/board.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { DialogModule } from '@angular/cdk/dialog';
+import { TodoDialogComponent } from './components/todo-dialog/todo-dialog.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     BoardsComponent,
     NavbarComponent,
     BoardComponent,
+    TodoDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     FontAwesomeModule,
     CdkAccordionModule,
     DragDropModule,
+    DialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
