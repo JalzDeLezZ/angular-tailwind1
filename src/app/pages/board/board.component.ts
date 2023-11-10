@@ -26,47 +26,7 @@ import { TodoDialogComponent } from '../../components/todo-dialog/todo-dialog.co
   ],
 })
 export class BoardComponent {
-  colums: Column[] = [
-    {
-      title: 'To Do',
-      todos: [
-        {
-          id: '1',
-          title: 'Make dishes',
-        },
-        {
-          id: '2',
-          title: 'Buy a unicorn',
-        },
-        {
-          id: '2',
-          title: 'Watch Angular Path in Platzi',
-        },
-      ],
-    },
-    {
-      title: 'Doing',
-      todos: [
-        {
-          id: '1',
-          title: 'Make dishes',
-        },
-        {
-          id: '2',
-          title: 'Buy a unicorn',
-        },
-      ],
-    },
-    {
-      title: 'Done',
-      todos: [
-        {
-          id: '1',
-          title: 'Make dishes',
-        },
-      ],
-    },
-  ];
+  colums: Column[] = api_columns;
 
   constructor(public dialog: Dialog) {}
 
@@ -93,15 +53,69 @@ export class BoardComponent {
       todos: [],
     });
   }
+
   dropHorizontal(event: CdkDragDrop<Column[]>) {
     moveItemInArray(this.colums, event.previousIndex, event.currentIndex);
   }
 
-  openDialog() {
-    this.dialog.open(TodoDialogComponent, {
+  openDialog(todo: ToDo) {
+    const dialogRef = this.dialog.open(TodoDialogComponent, {
       maxWidth: '50%',
       minWidth: '300px',
       autoFocus: false,
+      data: {
+        todo,
+      },
+    });
+
+    dialogRef.closed.subscribe((result) => {
+      console.log(result);
     });
   }
 }
+
+/* -------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+
+const api_columns = [
+  {
+    title: 'To Do',
+    todos: [
+      {
+        id: '1',
+        title: 'Make dishes',
+      },
+      {
+        id: '2',
+        title: 'Buy a unicorn',
+      },
+      {
+        id: '2',
+        title: 'Watch Angular Path in Platzi',
+      },
+    ],
+  },
+  {
+    title: 'Doing',
+    todos: [
+      {
+        id: '1',
+        title: 'Make dishes',
+      },
+      {
+        id: '2',
+        title: 'Buy a unicorn',
+      },
+    ],
+  },
+  {
+    title: 'Done',
+    todos: [
+      {
+        id: '1',
+        title: 'Make dishes',
+      },
+    ],
+  },
+];
