@@ -42,6 +42,8 @@ $ ng g c components/btn --skip-tests --style=none
 [• QuickType](https://app.quicktype.io/)
 
 [• Material Dashboards ](https://demos.creative-tim.com/material-dashboard-pro/pages/dashboards/analytics.html)
+[• Tailwindcss-Components ](https://flowbite.com/)
+[• Fake API Store ](https://fakeapi.platzi.com/)
 
 ---
 
