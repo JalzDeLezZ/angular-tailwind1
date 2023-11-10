@@ -19,6 +19,7 @@ import { DialogModule } from '@angular/cdk/dialog';
 import { TodoDialogComponent } from './components/todo-dialog/todo-dialog.component';
 import { ScrollComponent } from './pages/scroll/scroll.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     DragDropModule,
     DialogModule,
     HttpClientModule,
+    ScrollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

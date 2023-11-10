@@ -22,7 +22,7 @@ $ ng serve
 $ tailwindcss: https://tailwindcss.com/docs/guides/angular
 $ ng add @angular/cdk
 $ ng add @fortawesome/angular-fontawesome@0.12.1
-$ angular cdk: https://material.angular.io/cdk/categories -- overlay, accordion
+$ angular cdk: https://material.angular.io/cdk/categories -- overlay, accordion, scrolling
 
 # implement
 $ npm i -D @tailwindcss/forms
