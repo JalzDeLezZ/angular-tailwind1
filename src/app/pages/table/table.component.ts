@@ -7,6 +7,7 @@ import { Product } from '../../models/product.model';
   templateUrl: './table.component.html',
 })
 export class TableComponent implements OnInit {
+  totalPrice = 0;
   products: Product[] = [];
   columns: string[] = ['idd', 'cover', '#Titlex', 'price'];
   constructor(private http: HttpClient) {}
@@ -15,6 +16,7 @@ export class TableComponent implements OnInit {
       .get<Product[]>('https://api.escuelajs.co/api/v1/products')
       .subscribe((res) => {
         this.products = res;
+        this.totalPrice = this.products.reduce((acc, el) => acc + el.price, 0);
       });
   }
 }
